@@ -1,0 +1,18 @@
+/* Color de toda la pagina */
+.gradient-custom{
+    background: linear-gradient(to right, rgb(5, 9, 236), rgb(7, 240, 170))
+    } 
+ /* Tipo de letra de la pagina */
+body{
+    font-family: 'arial';
+}
+/* Aliniacion del texto H1 */
+.h1{
+    align-items: center;
+    font-weight: bold;
+}
+/* Diseño de la imagien */
+.img-fluid{
+    margin-top: 130px;
+    left: 100px;
+}

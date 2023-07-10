@@ -1,0 +1,21 @@
+/* Color de toda la pagina */
+.gradient-custom{
+    background: linear-gradient(to right, rgb(241, 238, 4), rgba(21, 151, 114, 0.815))
+    } 
+ /* Tipo de letra de la pagina */
+body{
+    font-family: 'arial';
+}
+/* Aliniacion del texto H1 */
+.h1{
+    align-items: center;
+    font-weight: bold;
+   
+}
+/* Diseño de la imagien */
+.img-fluid{
+    border-radius: 1rem;
+    width: 650px;
+    height: 800px;
+    
+}

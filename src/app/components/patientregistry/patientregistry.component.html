@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Pacientes</title>
+  <!-- <link rel="stylesheet" href="registre.css"> -->
+</head>
+
+<body>
+  <h1>Registro de Pacientes</h1>
+
+  <form [formGroup]="formulario" (ngSubmit)="validarFormulario()" novalidate>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" (input)="limpiarMensajeError('nombre')">
+    <label *ngIf="nombreError" class="error">{{ nombreError }}</label>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" [(ngModel)]="apellido" (input)="limpiarMensajeError('apellido')">
+    <label *ngIf="apellidoError" class="error">{{ apellidoError }}</label>
+
+    <label for="cedula">Cédula:</label>
+    <input type="text" id="cedula" name="cedula" [(ngModel)]="cedula" (input)="limpiarMensajeError('cedula')">
+    <label *ngIf="cedulaError" class="error">{{ cedulaError }}</label>
+
+    <label for="edad">Edad:</label>
+    <input type="text" id="edad" name="edad" [(ngModel)]="edad" (input)="limpiarMensajeError('edad')">
+    <label *ngIf="edadError" class="error">{{ edadError }}</label>
+
+    <label for="fecha">Fecha de ingreso:</label>
+    <input type="date" id="fecha" name="fecha" [(ngModel)]="fecha" (input)="limpiarMensajeError('fecha')">
+    <label *ngIf="fechaError" class="error">{{ fechaError }}</label>
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo" [(ngModel)]="sexo" (input)="limpiarMensajeError('sexo')">
+      <option value="">Seleccione una opción</option>
+      <option value="masculino">Masculino</option>
+      <option value="femenino">Femenino</option>
+      <option value="otro">Otro</option>
+    </select>
+    <label *ngIf="sexoError" class="error">{{ sexoError }}</label>
+
+    <label for="direccion">Dirección:</label>
+    <textarea id="direccion" name="direccion" [(ngModel)]="direccion" (input)="limpiarMensajeError('direccion')"></textarea>
+    <label *ngIf="direccionError" class="error">{{ direccionError }}</label>
+   
+    <input type="submit" value="Guardar" [disabled]="!guardarHabilitado">
+  </form>
+
+
+</body>
+
+</html>

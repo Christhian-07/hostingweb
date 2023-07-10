@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link href="../css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="registre.css" rel="stylesheet" crossorigin="anonymous"> -->
+  <!--Software para gestión de historias clínicas de pacientes odontológicos del Policlinico de la ULEAM-->
+
+  <title>Registro</title>
+</head>
+
+<body>
+  <!--Creacion de la imagen de portada-->
+
+  <body class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="../../../assets/LOGO-ULEAM.png" alt="ULEAM" class="mx-auto img-fluid"
+                  style="border-radius: 1rem 0 0 1rem" />
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+
+                  <form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <!--Creacion del encabezado-->
+                      <span class="h1 fw-bold mb-0">Policlinico ULEAM</span>
+                    </div>
+                    <!--Creacion del titulo-->
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+                      Registro de usuarios
+                    </h5>
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example17">Email</label>
+                      <input type="text" id="email" class="form-control orm-control-lg" formControlName="email"
+                        placeholder="Ingrese su correo electronico" required />
+                    </div>
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example27">Password</label>
+                      <input type="password" id="contraseña" class="form-control" formControlName="password"
+                        placeholder="Ingrese su Contraseña" required />
+                    </div>
+                    <div class="pt-1 mb-4">
+                      <input class="btn btn-dark btn-lg btn-block" type="submit" value="Crear Cuenta" />
+                    </div>
+
+                    <!--Creacion de enlace a pagina de login-->
+                    <p class="mb-5 pb-lg-2" style="color: #393f81">
+                      ¿Ya tienes una cuenta?
+                      <a href="../login/" style="color: #393f81">Inicie Sesion</a>
+                    </p>
+                    <a  class="small text-muted">Terminos de uso.</a>
+                    <a class="small text-muted">Politica de privacidad</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</body>
